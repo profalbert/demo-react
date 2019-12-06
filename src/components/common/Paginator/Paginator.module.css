@@ -1,0 +1,67 @@
+
+.selectedPage {
+	font-family: 'Roboto-Bold';
+}
+
+.pogination {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 20px;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.pageNumber {
+	margin: 5px;
+	cursor: pointer;
+}
+
+.poginatorButton {
+	height: 30px;
+	background-color: #20232a;
+	width: 80px;
+	padding: 0;
+	border: 1px solid #ff0000;
+	margin: 0px 15px;
+	color: #61dafb;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

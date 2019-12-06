@@ -1,0 +1,68 @@
+.header {
+  grid-area: h;
+  background-color: green;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 0px 20px;
+  border: 2px dotted #61dafb;
+  background-color: #20232a;
+}
+
+.header img {
+ width: 40px;
+ height: 40px; 
+}
+
+.headerButton {
+  height: 30px;
+  background-color: #61dafb;
+  border: none;
+  width: 80px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.loginBlock {
+  display: flex;
+  align-items: center;
+}
+
+.loginBlockLine {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.loginBlock a {
+  color: #fff;
+  display: flex;
+  text-decoration: none;
+}
+
+.logoutBlock a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.headerImgIconA {
+  border-radius: 50%
+}
+
+.headerImgIconA img{
+  border-radius: 50%
+}
+
+.headerPreloaderBlock {
+  width: 50px;
+  height: 50px;
+}
+
+
+
+

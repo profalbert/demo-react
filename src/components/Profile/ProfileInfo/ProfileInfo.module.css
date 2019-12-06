@@ -1,0 +1,133 @@
+.descriptionBlock {
+	padding: 10px;
+	max-width: 500px;
+}
+
+.descriptionBlock img {
+	width: 300px;
+	height: 300px;
+}
+
+.Contact {
+	padding-left: 15px;
+	margin-bottom: 5px;
+}
+.ContactMain {
+	display: inline-block;
+  margin-bottom: 5px;
+}
+.ContactLink {
+	color: #05228e;
+}
+
+.file input{
+  display: none;
+}
+.file label{
+	height: 30px;
+	background-color: #61dafb;
+	border: none;
+	width: 300px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.formButtonEdit {
+	height: 30px;
+	background-color: #61dafb;
+	border: none;
+	width: 100%;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.formInfo {
+	max-width: 500px;
+	border: 3px dotted #119c0c;
+	padding: 10px;
+	padding-top: 5px;
+	margin-top: 10px;
+}
+
+.formInfoTitle {
+  margin: 5px 0px;
+}
+
+.profileForm {
+	max-width: 500px;
+	border: 2px dotted #ff7600;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-top: 15px;
+}
+.profileMiniBlock {
+	margin-top: 15px;
+}
+.profileMiniBlock:first-child {
+	margin-top: 0px;
+}
+.profileMiniBlock b{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.profileMiniBlock input{
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	display: flex;
+	border: none;
+	box-sizing: border-box;
+}
+.profileMiniBlock textarea{
+	width: 100%;
+	height: 60px;
+	padding: 5px;
+	display: flex;
+	border: 2px solid #000;
+	box-sizing: border-box;
+}
+.profileMiniBlockCheckbox{
+	display: inline-block;
+	height: 12px;
+	margin-left: 10px;
+}
+.profileMiniBlockCheckbox input{
+	height: 15px;
+	width: 15px;
+	margin: 0px;
+	cursor: pointer;
+}
+.profileFormButtonSave {
+	height: 40px;
+	background-color: #61dafb;
+	border: none;
+	font-size: 18px;
+	width: 100%;
+	padding: 0;
+	margin-top: 25px;
+	cursor: pointer;
+	border-radius: 50px;
+}
+
+.pCPreloaderBlock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pCPreloader {
+  width: 200px;
+  height: 200px;
+}
+
+
+

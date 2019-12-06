@@ -1,0 +1,30 @@
+.nav {
+ grid-area: n;
+ padding: 20px;
+ border: 2px dotted #61dafb;
+ background-color: #20232a;
+}
+
+.nav ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav ul li {
+  list-style: none;
+  margin: 5px 0px;
+}
+
+.item a{
+  color: #fff;
+  font-family: 'Roboto-Bold';
+	text-decoration: none;
+}
+
+.item a.active{
+	color: #12cd0c;
+}
+
+
+
+

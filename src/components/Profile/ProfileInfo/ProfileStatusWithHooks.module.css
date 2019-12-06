@@ -1,0 +1,39 @@
+.errorStatus {
+  color: red;
+}
+
+.statusFromProps {
+  font-family: 'Roboto-Italic';
+  width: 300px;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.statusFromState {
+  display: flex;
+  max-width: 300px;
+  margin-top: 5px;
+}
+
+.statusFromState b{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusFromStateInput {
+  padding: 0px;
+  border: 1px solid #000;
+  height: 23px;
+  padding-left: 5px;
+  margin-left: 5px;
+  width: 100%;
+  font-size: 15px;
+}
+
+
+
+
+

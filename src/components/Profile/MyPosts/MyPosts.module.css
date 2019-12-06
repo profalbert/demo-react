@@ -1,0 +1,38 @@
+.postsBlock {
+	padding: 10px;
+	margin-top: 35px;
+}
+
+.postsBlock h3{
+	font-size: 19px;
+	margin: 20px 0px;
+}
+
+.posts {
+	margin-top: 10px;
+}
+
+.formMyPosts {
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.formMyPostsField {
+	width: 200px;
+	height: 30px;
+	padding: 5px;
+	display: flex;
+	border: 2px solid #000;
+}
+
+.formMyPostsButton {
+	height: 44px;
+	background-color: #12cd0c;
+	border: none;
+	width: 80px;
+	padding: 0;
+	border: 2px dotted #000;
+	border-left: none;
+	cursor: pointer;
+	font-size: 16px;
+}

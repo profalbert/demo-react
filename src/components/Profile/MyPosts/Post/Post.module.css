@@ -1,0 +1,21 @@
+.item {
+	color: #000;
+	display: inline-block;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+.item img {
+	width: 150px;
+	height: 100px;
+}
+
+.itemMessage {
+	font-size: 18px;
+	margin: 2px 0px;
+}
+
+.itemLikes {
+	font-family: 'Roboto-Italic';
+}
+
