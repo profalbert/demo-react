@@ -22,7 +22,7 @@ const Header = (props) => {
      <div className={s.logoutBlock}>
       { props.isAuth 
           ? <div>
-              <button className={s.headerButton} onClick={props.logout}>Logout</button>
+              <button className={s.headerButton} onClick={() => {props.logout()}}>Logout</button>
             </div>
           : <NavLink to={'/login'}>Login</NavLink>
       }

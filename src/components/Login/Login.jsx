@@ -74,12 +74,14 @@ const Login = (props) => {
           
           <div className={s.testAccountMiniBlockWrap}>
             <div className={s.testAccountMiniBlock}>
-              <b>Email: </b>free@samuraijs.com
+              <b>Email: </b>siseros589@mailhub.pro
             </div>
             <div className={s.testAccountMiniBlock}>
               <b>Password: </b>free
             </div>
-          </div>        
+          </div>  
+
+          <div className={s.testAccountAttention}>Attention! This account has a limit on server requests</div>      
         </div>
       </div>      
     </div>
@@ -90,7 +92,8 @@ const Login = (props) => {
 let mapStateToProps = (state) => {
   return {
     isAuth: state.auth.isAuth,
-    captchaUrl: state.auth.captchaUrl
+    captchaUrl: state.auth.captchaUrl,
+    authorizedUserId: state.auth.authorizedUserId
   }
 }
 let mapDispatchToProps = {

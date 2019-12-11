@@ -23,6 +23,7 @@ let Users = (props) => {
 				  <User user={u} follow={props.follow}
 								unfollow={props.unfollow}
 								isAuth={props.isAuth}
+								authorizedUserId={props.authorizedUserId}
 								followingInProgress={props.followingInProgress}
 								key={u.id}/>)
 				}

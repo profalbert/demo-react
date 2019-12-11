@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {withRouter, Redirect} from 'react-router-dom';
 import {setUserProfileThunk, savePhotoThunk, saveProfileThunk,
  getStatusThunk, updateStatusThunk} from '../../redux/profile-reducer';
+import {setPhotosMeThunk} from '../../redux/auth-reducer';
 import {compose} from 'redux';
 import Preloader from '../common/Preloader/Preloader';
 import s from './Profile.module.css';
@@ -43,6 +44,7 @@ class ProfileContainer extends React.Component{
 				});
 			})
 			this.props.getStatusThunk(userId);
+			this.props.setPhotosMeThunk(this.props.authorizedUserId, true);
 		}
 	}
 
@@ -90,7 +92,8 @@ let mapDispatchToProps = {
 	getStatusThunk,
 	updateStatusThunk,
 	savePhotoThunk,
-	saveProfileThunk
+	saveProfileThunk,
+	setPhotosMeThunk
 }
 
 

@@ -32,6 +32,7 @@ class UsersAPIComponent extends React.Component {
                   users={this.props.users}
                   follow={this.props.follow}
                   unfollow={this.props.unfollow}
+                  authorizedUserId={this.props.authorizedUserId}
                   toggleFollowingProgress={this.props.toggleFollowingProgress}
                   followingInProgress={this.props.followingInProgress}/>}
       </>
@@ -48,7 +49,8 @@ let mapStateToProps = (state) => {
     currentPage: getCurrentPage(state),
     isFetching: getIsFetching(state),
     isAuth: getIsAuth(state),
-    followingInProgress: getFollowingInProgress(state)
+    followingInProgress: getFollowingInProgress(state),
+    authorizedUserId: state.auth.userId
   }
 }
 let mapDispatchToProps = {

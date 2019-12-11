@@ -68,7 +68,7 @@ export const profileReducer = (state = initialState, action) => {
 export const addPostActionCreator = (newPostText) => ({
  type: ADD_POST, newPostText
 });
-const setUserProfile = (profile) => ({ 
+export const setUserProfile = (profile) => ({ 
 	type: SET_USER_PROFILE, profile 
 });
 const setStatus = (status) => ({ 
@@ -87,7 +87,7 @@ export const setUserProfileThunk = (userId) => async (dispatch) => {
 	let response = await profileAPI.getProfile(userId)
 	.catch((response)=>{
 		dispatch(setUserProfile(response.data));
-   	dispatch(toggleIsFetching(false));
+		 dispatch(toggleIsFetching(false));
 		return Promise.reject(response.response.data.message);
 	});
 	dispatch(setUserProfile(response.data));
