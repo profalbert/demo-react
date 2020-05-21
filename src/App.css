@@ -76,6 +76,22 @@
   height: 200px;
 }
 
+/* div > p {
+  background-color: yellow;
+} // только для дочерних параграфов, глубоко вложенные не считаются
+
+div + p {
+  background-color: yellow;
+} // только первый параграфов, а не все, где div and p имеют общего родителя
+
+div ~ p {
+  background-color: yellow;
+} // все параграфы, где div and p имеют общего родителя
+
+p.center.large {
+  font-size: 300%;
+} // large будет работать только в том случае, если у p будет класс center */
+
 @media(min-width: 992px) {
   .appTextMobileBlockWrap {
     display: none;
