@@ -2,7 +2,7 @@
   "name": "react-kabzda-1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://albert-hosting.ru/appReact",
+  "homepage": "https://profalbert.github.io/appReact",
   "dependencies": {
     "@types/classnames": "^2.2.10",
     "@types/jest": "^25.2.2",
