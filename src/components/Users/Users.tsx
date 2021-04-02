@@ -1,60 +1,66 @@
-import React from 'react';
-import Paginator from '../common/Paginator/Paginator';
-import User from './User';
-import Preloader from '../common/Preloader/Preloader';
-import s from './Users.module.css';
-import {UserType} from '../../types/types';
+import React, { useEffect } from 'react'
+import Paginator from '../common/Paginator/Paginator'
+import { User } from './User'
+import Preloader from '../common/Preloader/Preloader'
+import s from './Users.module.css'
+import { UserType } from '../../types/types'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  getCurrentPage,
+  getPageSize,
+  getTotalUsersCount,
+  getUsersSuperSelector,
+  getIsFetching,
+} from '../../redux/users-selectors'
+import { requestUsers } from '../../redux/users-reducer'
+import { AppStateType } from '../../redux/redux-store'
+import { DispatchType } from '../../types/types'
 
+type PropsType = {}
 
-type PropsType = {
-	totalUsersCount: number
-	pageSize: number
-	currentPage: number
-	onPageChanged: (pageNumber: number) => void
-	users: Array<UserType>
-	followingInProgress: number[]
-	unfollow: (userId: number) => void
-	follow: (userId: number) => void
-	isAuth: boolean
-	isFetching: boolean
-	authorizedUserId: number | null
+const Users: React.FC<PropsType> = () => {
+  const isFetching = useSelector((state: AppStateType) => getIsFetching(state))
+  const pageSize = useSelector((state: AppStateType) => getPageSize(state))
+  const users = useSelector((state: AppStateType) =>
+    getUsersSuperSelector(state),
+  )
+  const totalUsersCount = useSelector((state: AppStateType) =>
+    getTotalUsersCount(state),
+  )
+  const currentPage = useSelector((state: AppStateType) =>
+    getCurrentPage(state),
+  )
+
+  const dispatch = useDispatch<DispatchType>()
+
+  useEffect(() => {
+    dispatch(requestUsers(currentPage, pageSize))
+  }, [])
+
+  const onPageChanged = (pageNumber: number) => {
+    dispatch(requestUsers(pageNumber, pageSize))
+  }
+
+  return (
+    <div className={s.usersWrapper}>
+      <Paginator
+        totalUsersCount={totalUsersCount}
+        pageSize={pageSize}
+        currentPage={currentPage}
+        onPageChanged={onPageChanged}
+      />
+
+      {isFetching ? (
+        <div className={s.usersPreloaderBlock}>
+          <div className={s.usersPreloader}>
+            <Preloader />
+          </div>
+        </div>
+      ) : (
+        users.map((u: UserType) => <User key={u.id} user={u} />)
+      )}
+    </div>
+  )
 }
 
-
-let Users: React.FC<PropsType> = ({users, totalUsersCount, pageSize, currentPage, onPageChanged, ...props}) => {
-	 return (
-			<div className={s.usersWrapper}>
-				<Paginator totalUsersCount={totalUsersCount}
-                   pageSize={pageSize}
-                   currentPage={currentPage}
-                   onPageChanged={onPageChanged} />
-
-				{props.isFetching 
-        ? <div className={s.usersPreloaderBlock}>
-						<div className={s.usersPreloader}>
-							<Preloader />
-						</div>
-					</div>  
-        : users.map((u: UserType) =>
-				  <User user={u} follow={props.follow}
-								unfollow={props.unfollow}
-								isAuth={props.isAuth}
-								authorizedUserId={props.authorizedUserId}
-								followingInProgress={props.followingInProgress}
-								key={u.id}/>)
-				}
-
-			</div>
-		);
-}
-
-
-export default Users;
-
-
-
-
-
-
-
-
+export default Users

@@ -1,21 +1,22 @@
-import React from 'react';
-import Preloader from '../components/common/Preloader/Preloader';
-import s from '../components/Users/Users.module.css';
+import React from 'react'
+import Preloader from '../components/common/Preloader/Preloader'
+import s from '../components/Users/Users.module.css'
 
-
-const withSuspense = (WrappedComponent: React.ComponentType): React.FC => (props) =>{
-  let preloader = <div className={s.suspensePreloaderBlock}>
-                    <div className={s.suspensePreloader}>
-                      <Preloader />
-                    </div>
-                  </div>;
+const withSuspense = (WrappedComponent: React.ComponentType): React.FC => (
+  props,
+) => {
+  const preloader = (
+    <div className={s.suspensePreloaderBlock}>
+      <div className={s.suspensePreloader}>
+        <Preloader />
+      </div>
+    </div>
+  )
   return (
     <React.Suspense fallback={preloader}>
-      <WrappedComponent {...props} />      
+      <WrappedComponent {...props} />
     </React.Suspense>
-  );
+  )
 }
 
-
-export default withSuspense;
-
+export default withSuspense

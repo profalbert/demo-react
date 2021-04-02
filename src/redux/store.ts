@@ -3,8 +3,7 @@
 // import {profileReducer} from './profile-reducer';
 // import {dialogsReducer} from './dialogs-reducer';
 
-
-// let store = {
+// const store = {
 // 	_state: {
 // 		profilePage: {
 //       posts: [
@@ -20,17 +19,17 @@
 // 		dialogsPage: {
 //       messagesData: [
 //        {id: 1, message: 'Hi'},
-//        {id: 2, message: 'How are you doing?'}, 
-//        {id: 3, message: 'GG'}, 
-//        {id: 4, message: 'GG'}, 
-//        {id: 5, message: 'GG'}, 
+//        {id: 2, message: 'How are you doing?'},
+//        {id: 3, message: 'GG'},
+//        {id: 4, message: 'GG'},
+//        {id: 5, message: 'GG'},
 //        {id: 6, message: 'GG'}
 //       ] as Array<{id: number, message: string}>,
 //       dialogsData: [
 //        {id: 1, name: 'Dimych'},
-//        {id: 2, name: 'Andrey'}, 
-//        {id: 3, name: 'Sveta'}, 
-//        {id: 4, name: 'Sasha'}, 
+//        {id: 2, name: 'Andrey'},
+//        {id: 3, name: 'Sveta'},
+//        {id: 4, name: 'Sasha'},
 //        {id: 5, name: 'Valera'},
 //        {id: 6, name: 'Albert'}
 //       ] as Array<{id: number, name: string}>
@@ -55,19 +54,10 @@
 // 	}
 // }
 
-
 // export default store;
 // // @ts-ignore
 // window.store = store;
 
-
-
-
-
 // код ниже - заглушка
 // @ts-ignore
-window.store = 'here should be a store from redux';
-
-
-
-
+window.store = 'here should be a store from redux'

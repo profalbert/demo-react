@@ -1,34 +1,32 @@
 export type FieldValidatorType = (value: string) => string | undefined
 
-export const maxLengthCreator = (maxLength: number): FieldValidatorType => (value) => {
+export const maxLengthCreator = (maxLength: number): FieldValidatorType => (
+  value,
+) => {
   if (value && value.length > maxLength) {
-    return `Max length is ${maxLength} symbols`;
+    return `Max length is ${maxLength} symbols`
   } else {
-    return undefined;    
+    return undefined
   }
 }
 
 export const required: FieldValidatorType = (value) => {
   if (value) {
-    return undefined;
+    return undefined
   } else {
-    return "Field is required";    
+    return 'Field is required'
   }
 }
 
 export const withoutSpace: FieldValidatorType = (value) => {
   if (value) {
-    let str = value.replace(/\s/g, '');
+    const str = value.replace(/\s/g, '')
     if (!str) {
-      return "You entered only spaces";
+      return 'You entered only spaces'
     } else {
-      return undefined;
+      return undefined
     }
   } else {
-    return undefined;
+    return undefined
   }
 }
-
-
-
-

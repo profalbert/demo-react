@@ -1,12 +1,11 @@
-import MyPosts from './MyPosts';
-import {profileActions} from '../../../redux/profile-reducer';
-import {connect} from 'react-redux';
-import { AppStateType } from '../../../redux/redux-store';
-import { PostType } from '../../../types/types';
-
+import MyPosts from './MyPosts'
+import { profileActions } from '../../../redux/profile-reducer'
+import { connect } from 'react-redux'
+import { AppStateType } from '../../../redux/redux-store'
+import { PostType } from '../../../types/types'
 
 type MapStatePropsType = {
-  posts: PostType[],
+  posts: PostType[]
   newPostText: string | null
 }
 type MapDispatchPropsType = {
@@ -15,18 +14,23 @@ type MapDispatchPropsType = {
 type OwnPropsType = {}
 // type PropsType = MapStatePropsType & MapDispatchPropsType & OwnPropsType
 
-
-let mapStateToProps = (state: AppStateType): MapStatePropsType => {
+const mapStateToProps = (state: AppStateType): MapStatePropsType => {
   return {
     posts: state.profilePage.posts,
-    newPostText: state.profilePage.newPostText
+    newPostText: state.profilePage.newPostText,
   }
 }
-let mapDispatchToProps = {
-  addPost: profileActions.addPostActionCreator
+const mapDispatchToProps = {
+  addPost: profileActions.addPostActionCreator,
 }
 
-
-const MyPostsContainer = connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, mapDispatchToProps)(MyPosts);
-export default MyPostsContainer;
-
+const MyPostsContainer = connect<
+  MapStatePropsType,
+  MapDispatchPropsType,
+  OwnPropsType,
+  AppStateType
+>(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MyPosts)
+export default MyPostsContainer
